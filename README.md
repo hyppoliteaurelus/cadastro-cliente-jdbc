@@ -1,30 +1,59 @@
-# Cadastro de Clientes - Java JDBC
 
-Projeto CRUD de clientes utilizando Java, JDBC e MySQL.
+# Cadastro de Clientes – Java JDBC + MySQL
 
-## Funcionalidades
-- Cadastrar cliente
-- Listar clientes
-- Atualizar cliente
-- Excluir cliente
+## 📌 Sobre o projeto
 
-## Tecnologias
-- Java 17
-- JDBC
-- MySQL
-- Maven
+Este projeto é um sistema simples de cadastro de clientes desenvolvido em Java usando JDBC para se conectar a um banco de dados MySQL.  
+Ele realiza operações completas de **CRUD** (Create, Read, Update, Delete) no banco.
 
-## Estrutura
-- model: entidade Cliente
-- dao: acesso ao banco
-- config: conexão com MySQL
-- app: menu principal
-
-## Como executar
-1. Criar banco de dados MySQL
-2. Criar tabela `clientes`
-3. Ajustar usuário e senha no `ConexaoMYSQL`
-4. Executar a classe `Main`
+O objetivo é demonstrar competência em:
+- programação Java
+- persistência de dados com JDBC
+- organização de projeto com pacotes
+- uso de banco de dados real
 
 ---
-Projeto para fins de estudo.
+
+## 🧱 Funcionalidades
+
+✔ Cadastrar clientes  
+✔ Listar clientes  
+✔ Atualizar clientes  
+✔ Excluir clientes  
+
+---
+
+## 🛠 Tecnologias utilizadas
+
+- Java 17  
+- JDBC (Java Database Connectivity)  
+- MySQL  
+- Maven
+
+---
+
+## 📁 Organização do projeto
+
+
+---
+
+## 🚀 Como executar
+
+### 1. Clone o projeto
+
+```bash
+git clone https://github.com/hyppoliteaurelus/cadastro-cliente-jdbc.git
+
+2. Configure o banco de dados
+
+A partir do MySQL Workbench ou terminal:
+
+CREATE DATABASE banco;
+USE banco;
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    cpf VARCHAR(11) UNIQUE NOT NULL
+);
